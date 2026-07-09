@@ -227,6 +227,25 @@ export class Import {
       }
       clubSums.set(row.ClubName, (clubSums.get(row.ClubName) ?? 0) + (row.Grade ?? 0));
     }
+
+    // Split each Mixed club's grade evenly between the same club in Male and
+    // Female, creating the gender map or club entry when it doesn't exist yet,
+    // then drop the Mixed category so its grades aren't double-counted.
+    const mixedSums = byGender.get('Mixed');
+    if (mixedSums) {
+      for (const gender of ['Male', 'Female']) {
+        let clubSums = byGender.get(gender);
+        if (!clubSums) {
+          clubSums = new Map<string, number>();
+          byGender.set(gender, clubSums);
+        }
+        for (const [club, total] of mixedSums) {
+          clubSums.set(club, (clubSums.get(club) ?? 0) + total / 2);
+        }
+      }
+      byGender.delete('Mixed');
+    }
+
     return byGender;
   }
 
