@@ -14,6 +14,7 @@ import { EventParameter } from '../core/electron-api';
 /** One event row shown in the table. */
 interface EventRow {
   key: string;
+  eventName: string;
   eventCode: string;
   eventGender: string;
   order: number;
@@ -49,6 +50,7 @@ export class EventParameters {
   protected readonly rows: EventRow[] = eventConstants
     .map((e) => ({
       key: eventKey(e.EventCode, e.EventGender),
+      eventName: e.EventName,
       eventCode: e.EventCode,
       eventGender: e.EventGender,
       order: e.Order,

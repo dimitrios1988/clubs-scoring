@@ -1,5 +1,6 @@
 export const eventConstants = [
   {
+    EventName: '60m',
     EventCode: '60',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -8,6 +9,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '60m',
     EventCode: '60',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -16,6 +18,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '80m',
     EventCode: '80',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -24,6 +27,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '100m',
     EventCode: '100',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -32,6 +36,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '100m',
     EventCode: '100',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -40,6 +45,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '200m',
     EventCode: '200',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -48,6 +54,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '200m',
     EventCode: '200',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -56,6 +63,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '400m',
     EventCode: '400',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -64,6 +72,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '400m',
     EventCode: '400',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -72,6 +81,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '600m',
     EventCode: '600',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -80,6 +90,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '800m',
     EventCode: '800',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -88,6 +99,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '800m',
     EventCode: '800',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -96,6 +108,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '1500m',
     EventCode: '1500',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -104,6 +117,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '1500m',
     EventCode: '1500',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -112,6 +126,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '1000m',
     EventCode: '1000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -120,22 +135,25 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m',
     EventCode: '3000',
-    EventGender: 'Female',
+    EventGender: 'Male',
     BiggerIsBetter: false,
     Order: 16,
     ValidationRegex:
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m',
     EventCode: '3000',
-    EventGender: 'Male',
+    EventGender: 'Female',
     BiggerIsBetter: false,
     Order: 17,
     ValidationRegex:
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5000m',
     EventCode: '5000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -144,6 +162,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5000m',
     EventCode: '5000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -152,6 +171,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10000m',
     EventCode: '10000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -160,6 +180,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10000m',
     EventCode: '10000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -168,6 +189,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '30K',
     EventCode: '30K',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -176,6 +198,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '30K',
     EventCode: '30K',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -184,6 +207,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '60m Hurdles',
     EventCode: '60H',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -192,6 +216,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '60m Hurdles',
     EventCode: '60H',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -200,6 +225,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '80m Hurdles (76.2cm)',
     EventCode: '80H76.2',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -208,6 +234,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '100m Hurdles',
     EventCode: '100H',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -216,6 +243,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '100m Hurdles (84cm)',
     EventCode: '100H84-8.50',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -224,6 +252,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '100m Hurdles (76.2cm)',
     EventCode: '100H76.2',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -232,6 +261,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '110m Hurdles',
     EventCode: '110H',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -240,6 +270,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '110m Hurdles (100m)',
     EventCode: '110H100',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -248,6 +279,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '110m Hurdles (91.4m)',
     EventCode: '110H91.4',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -256,6 +288,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '400m Hurdles',
     EventCode: '400H',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -264,6 +297,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '400m Hurdles',
     EventCode: '400H',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -272,6 +306,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '400m Hurdles (84cm)',
     EventCode: '400H84',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -280,6 +315,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '2000m Steeplechase',
     EventCode: '2000S',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -288,6 +324,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '2000m Steeplechase (84cm)',
     EventCode: '2000S84',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -296,6 +333,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m Steeplechase',
     EventCode: '3000S',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -304,6 +342,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m Steeplechase',
     EventCode: '3000S',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -312,6 +351,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: 'High Jump',
     EventCode: 'HJ',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -319,6 +359,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'High Jump',
     EventCode: 'HJ',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -326,6 +367,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Pole Vault',
     EventCode: 'PV',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -333,6 +375,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Pole Vault',
     EventCode: 'PV',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -340,6 +383,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Long Jump',
     EventCode: 'LJ',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -347,6 +391,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Long Jump',
     EventCode: 'LJ',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -354,6 +399,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Triple Jump',
     EventCode: 'TJ',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -361,6 +407,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Triple Jump',
     EventCode: 'TJ',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -368,6 +415,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -375,6 +423,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -382,6 +431,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP6',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -389,6 +439,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP5',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -396,6 +447,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP4',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -403,6 +455,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Shot Put',
     EventCode: 'SP3',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -410,6 +463,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Discus Throw',
     EventCode: 'DT',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -417,6 +471,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Discus Throw',
     EventCode: 'DT',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -424,6 +479,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Discus Throw (1.75kg)',
     EventCode: 'DT1.75',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -431,6 +487,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Discus Throw (1.5kg)',
     EventCode: 'DT1.5',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -438,6 +495,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Discus Throw (1.0kg)',
     EventCode: 'DT1',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -445,6 +503,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Hammer Throw',
     EventCode: 'HT',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -452,6 +511,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Hammer Throw',
     EventCode: 'HT',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -459,6 +519,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Hammer Throw (4kg)',
     EventCode: 'HT6',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -466,6 +527,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Hammer Throw (3kg)',
     EventCode: 'HT5',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -473,6 +535,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Hammer Throw (3kg)',
     EventCode: 'HT3',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -480,6 +543,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Javelin Throw',
     EventCode: 'JT',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -487,6 +551,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Javelin Throw',
     EventCode: 'JT',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -494,6 +559,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Javelin Throw (700g)',
     EventCode: 'JT700',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -501,6 +567,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Javelin Throw (600g)',
     EventCode: 'JT600',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -508,6 +575,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Javelin Throw (500g)',
     EventCode: 'JT500',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -515,6 +583,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,3}[\.][0-9]{2}$',
   },
   {
+    EventName: 'Heptathlon (Indoor)',
     EventCode: 'Hepi',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -522,6 +591,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: 'Pentathlon',
     EventCode: 'Pen',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -529,6 +599,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: 'Decathlon',
     EventCode: 'Dec',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -536,6 +607,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: 'Heptathlon',
     EventCode: 'Hep',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -543,6 +615,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: 'Octathlon (GRE U16)',
     EventCode: 'Octathlon (GRE U16)',
     EventGender: 'Male',
     BiggerIsBetter: true,
@@ -550,6 +623,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: 'Hexathlon (GRE U16)',
     EventCode: 'Hexathlon (GRE U16)',
     EventGender: 'Female',
     BiggerIsBetter: true,
@@ -557,6 +631,7 @@ export const eventConstants = [
     ValidationRegex: '^[0-9]{1,4}$',
   },
   {
+    EventName: '4x100m Relay',
     EventCode: '4x1',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -565,6 +640,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4x100m Relay',
     EventCode: '4x1',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -573,6 +649,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4x400m Relay',
     EventCode: '4x4',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -581,6 +658,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4x400m Relay',
     EventCode: '4x4',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -589,6 +667,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4x400m Relay',
     EventCode: '4x4MX',
     EventGender: 'Mixed',
     BiggerIsBetter: false,
@@ -597,6 +676,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3km Race Walk',
     EventCode: '3W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -605,6 +685,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3km Race Walk',
     EventCode: '3W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -613,6 +694,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5km Race Walk',
     EventCode: '5W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -621,6 +703,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5km Race Walk',
     EventCode: '5W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -629,6 +712,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10km Race Walk',
     EventCode: '10W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -637,6 +721,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10km Race Walk',
     EventCode: '10W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -645,6 +730,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '20km Race Walk',
     EventCode: '20W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -653,6 +739,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '20km Race Walk',
     EventCode: '20W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -661,6 +748,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5000m Race Walk',
     EventCode: '5000W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -669,6 +757,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '5000m Race Walk',
     EventCode: '5000W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -677,6 +766,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10000m Race Walk',
     EventCode: '10000W',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -685,6 +775,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10000m Race Walk',
     EventCode: '10000W',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -693,6 +784,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '2000m Cross Country',
     EventCode: 'CC2000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -701,6 +793,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m Cross Country',
     EventCode: 'CC3000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -709,6 +802,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '3000m Cross Country',
     EventCode: 'CC3000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -717,6 +811,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4000m Cross Country',
     EventCode: 'CC4000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -725,6 +820,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '4000m Cross Country',
     EventCode: 'CC4000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -733,6 +829,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '6000m Cross Country',
     EventCode: 'CC6000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -741,6 +838,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '6000m Cross Country',
     EventCode: 'CC6000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -749,6 +847,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '8000m Cross Country',
     EventCode: 'CC8000',
     EventGender: 'Male',
     BiggerIsBetter: false,
@@ -757,6 +856,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '8000m Cross Country',
     EventCode: 'CC8000',
     EventGender: 'Female',
     BiggerIsBetter: false,
@@ -765,6 +865,7 @@ export const eventConstants = [
       '^(?:[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]|[0-9]{1,2}:[0-5][0-9]|[0-5]?[0-9])(?:[\.][0-9]{1,2})?$',
   },
   {
+    EventName: '10000m Cross Country',
     EventCode: 'CC10000',
     EventGender: 'Male',
     BiggerIsBetter: false,
