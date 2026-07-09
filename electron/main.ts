@@ -125,12 +125,18 @@ function buildApplicationMenu(): void {
 }
 
 function createWindow(): void {
+  // The packaged Windows executable already embeds the icon, but the dev
+  // window (and Linux) need it set explicitly. The source PNG lives in the
+  // electron-builder resources folder at <project>/build/icon.png.
+  const windowIcon = isDev ? path.join(app.getAppPath(), 'build', 'icon.png') : undefined;
+
   mainWindow = new BrowserWindow({
     width: 1100,
     height: 760,
     minWidth: 720,
     minHeight: 520,
     backgroundColor: '#fdfcff',
+    ...(windowIcon ? { icon: windowIcon } : {}),
     show: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),

@@ -1,6 +1,6 @@
 {
   "name": "clubs-scoring",
-  "version": "2026.07.08",
+  "version": "2026.07.09",
   "description": "A scoring application for clubs",
   "author": "Dimitrios Chondrokoukis",
   "main": "dist-electron/main.js",
@@ -21,7 +21,17 @@
     "appId": "gr.weallrun.clubsscoring.app",
     "productName": "Clubs Scoring",
     "directories": {
-      "output": "release"
+      "output": "release",
+      "buildResources": "build"
+    },
+    "win": {
+      "icon": "build/icon.png"
+    },
+    "mac": {
+      "icon": "build/icon.png"
+    },
+    "linux": {
+      "icon": "build/icon.png"
     },
     "files": [
       "dist-electron/**/*",
