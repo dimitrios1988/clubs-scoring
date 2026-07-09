@@ -1,0 +1,59 @@
+<mat-card class="import-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Εισαγωγή Αποτελεσμάτων</mat-card-title>
+    <mat-card-subtitle
+      >Επιλέξτε το Σύστημα Βαθμολόγησης και έπειτα ανεβάστε το αρχείο CSV αποτελεσμάτων από το
+      Roster Athletics για υπολογισμό βαθμών.</mat-card-subtitle
+    >
+  </mat-card-header>
+
+  <mat-card-content class="import-card__content">
+    <mat-form-field appearance="outline" class="import-card__select">
+      <mat-label>Σύστημα Βαθμολόγησης</mat-label>
+      <mat-select [value]="selectedGrade()" (selectionChange)="onSelectionChange($event.value)">
+        @for (option of options; track option.CODE) {
+          <mat-option [value]="option">{{ option.NAME }}</mat-option>
+        }
+      </mat-select>
+      @if (selectedGrade() === null) {
+        <mat-hint>Απαιτείται πριν το ανέβασμα αρχείου.</mat-hint>
+      }
+    </mat-form-field>
+
+    <div
+      class="drop-zone"
+      [class.drop-zone--disabled]="fileAreaDisabled"
+      appFileDrop
+      [fileDropDisabled]="fileAreaDisabled"
+      (fileDropped)="handleFile($event)"
+      (click)="!fileAreaDisabled && fileInput.click()"
+      role="button"
+      tabindex="0"
+      (keydown.enter)="!fileAreaDisabled && fileInput.click()"
+      (keydown.space)="!fileAreaDisabled && fileInput.click()"
+    >
+      <input #fileInput type="file" accept=".csv,text/csv" hidden (change)="onFileInput($event)" />
+
+      <mat-icon class="drop-zone__icon">
+        {{ parsing() ? 'hourglass_top' : 'cloud_upload' }}
+      </mat-icon>
+
+      @if (parsing()) {
+        <p class="drop-zone__text">Ανάλυση…</p>
+      } @else if (loadedFileName()) {
+        <p class="drop-zone__text">Φορτώθηκε: {{ loadedFileName() }}</p>
+        <p class="drop-zone__hint">Σύρετε ή κάντε κλικ για αντικατάσταση</p>
+      } @else {
+        <p class="drop-zone__text">Σύρετε &amp; αποθέστε ένα αρχείο CSV εδώ</p>
+        <p class="drop-zone__hint">ή κάντε κλικ για αναζήτηση</p>
+      }
+    </div>
+
+    @if (selectedGrade() === null) {
+      <p class="import-card__lock">
+        <mat-icon inline>lock</mat-icon>
+        Επιλέξτε μια επιλογή παραπάνω για να ενεργοποιηθεί το ανέβασμα αρχείου.
+      </p>
+    }
+  </mat-card-content>
+</mat-card>

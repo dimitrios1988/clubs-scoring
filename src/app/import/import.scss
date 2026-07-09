@@ -1,0 +1,95 @@
+:host {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.import-card {
+  width: 100%;
+  max-width: 520px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-top: 1rem;
+  }
+
+  &__select {
+    width: 100%;
+  }
+
+  &__lock {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--mat-sys-on-surface-variant);
+  }
+}
+
+.drop-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 2.5rem 1.5rem;
+  border: 2px dashed var(--mat-sys-outline);
+  border-radius: 16px;
+  background: var(--mat-sys-surface-container-low);
+  color: var(--mat-sys-on-surface);
+  cursor: pointer;
+  text-align: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.1s ease;
+
+  &:hover:not(.drop-zone--disabled) {
+    border-color: var(--mat-sys-primary);
+    background: var(--mat-sys-surface-container);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: var(--mat-sys-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--mat-sys-primary) 30%, transparent);
+  }
+
+  // Applied by FileDropDirective while dragging a file over the zone.
+  &.is-dragging:not(.drop-zone--disabled) {
+    border-color: var(--mat-sys-primary);
+    background: var(--mat-sys-primary-container);
+    color: var(--mat-sys-on-primary-container);
+    transform: scale(1.01);
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    border-style: solid;
+  }
+
+  &__icon {
+    font-size: 2.75rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--mat-sys-primary);
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--mat-sys-on-surface-variant);
+  }
+}

@@ -1,0 +1,44 @@
+.about__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.about__app-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.about__version {
+  margin: 0 0 0.75rem;
+  color: var(--mat-sys-on-surface-variant);
+}
+
+.about__details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+
+  dt {
+    font-weight: 500;
+    color: var(--mat-sys-on-surface-variant);
+  }
+
+  dd {
+    margin: 0;
+  }
+}
+
+.about__copyright {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--mat-sys-on-surface-variant);
+}

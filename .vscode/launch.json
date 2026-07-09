@@ -1,0 +1,60 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Debug the Electron main process (electron/main.ts) with breakpoints.
+      // preLaunchTask starts `ng serve` and compiles the Electron TS first.
+      "name": "Electron: Main",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+      },
+      "runtimeArgs": ["--remote-debugging-port=9223", "."],
+      "outFiles": ["${workspaceFolder}/dist-electron/**/*.js"],
+      "preLaunchTask": "dev-prep",
+      "console": "integratedTerminal",
+      "env": {
+        "NODE_ENV": "development",
+        // Some editor terminals set this to 1, which makes Electron run as
+        // plain Node (app is undefined). null unsets it for this launch.
+        "ELECTRON_RUN_AS_NODE": null
+      }
+    },
+    {
+      // Attach to the Angular renderer running inside Electron's Chromium.
+      "name": "Electron: Renderer",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "webRoot": "${workspaceFolder}/src",
+      "timeout": 30000
+    },
+    {
+      // Debug the Angular app in a normal browser (no Electron).
+      "name": "ng serve",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: start",
+      "url": "http://localhost:4200/"
+    },
+    {
+      "name": "ng test",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "npm: test",
+      "url": "http://localhost:9876/debug.html"
+    }
+  ],
+  "compounds": [
+    {
+      // One-click: launch Electron + attach the renderer debugger.
+      "name": "Electron: Debug (main + renderer)",
+      "configurations": ["Electron: Main", "Electron: Renderer"],
+      "stopAll": true
+    }
+  ]
+}

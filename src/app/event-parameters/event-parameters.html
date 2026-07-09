@@ -1,0 +1,63 @@
+<mat-card class="params-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Παράμετροι αγωνισμάτων</mat-card-title>
+    <mat-card-subtitle>
+      Ορίστε το όριο βαθμολόγησης για κάθε αγώνισμα και έπειτα αποθηκεύστε.
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="params-card__content">
+    <div class="params-table" role="table" aria-label="Παράμετροι αγωνισμάτων">
+      <div class="params-table__head" role="row">
+        <span role="columnheader">Κωδικός αγωνίσματος</span>
+        <span role="columnheader">Φύλο</span>
+        <span role="columnheader">Αγώνισμα</span>
+        <span role="columnheader">Όριο Βαθμολόγησης</span>
+        <span role="columnheader">Πολλαπλασιαστής</span>
+      </div>
+
+      @for (row of rows; track row.key) {
+        <div class="params-table__row" role="row">
+          <span class="params-table__code" role="cell">{{ row.eventCode }}</span>
+          <span class="params-table__gender" role="cell">{{ row.eventGender }}</span>
+          <mat-form-field appearance="outline" class="params-table__field" role="cell">
+            <mat-label>Αγώνισμα</mat-label>
+            <input
+              matInput
+              type="text"
+              [value]="nameFor(row.key)"
+              (input)="onFieldInput(row.key, 'name', $event)"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="params-table__field" role="cell">
+            <mat-label>Επίδοση</mat-label>
+            <input
+              matInput
+              type="text"
+              [ngModel]="performanceFor(row.key)"
+              (ngModelChange)="setPerformance(row.key, $event)"
+              [pattern]="row.validationRegex"
+            />
+            <mat-error>Μη έγκυρη μορφή για αυτό το αγώνισμα.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="params-table__field" role="cell">
+            <mat-label>Πολλαπλασιαστής</mat-label>
+            <input
+              matInput
+              type="number"
+              [value]="multipliedByFor(row.key)"
+              (input)="onMultipliedByInput(row.key, $event)"
+            />
+          </mat-form-field>
+        </div>
+      }
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions align="end" class="params-card__actions">
+    <button mat-flat-button color="primary" (click)="save()" [disabled]="saving()">
+      <mat-icon>save</mat-icon>
+      {{ saving() ? 'Αποθήκευση…' : 'Αποθήκευση' }}
+    </button>
+  </mat-card-actions>
+</mat-card>

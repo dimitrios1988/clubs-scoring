@@ -1,0 +1,17 @@
+<mat-toolbar class="app-toolbar">
+  <mat-icon>scoreboard</mat-icon>
+  <span class="app-toolbar__title">{{ title }}</span>
+
+  <nav class="app-toolbar__nav">
+    <a mat-button routerLink="/import" routerLinkActive="app-toolbar__link--active">
+      Εισαγωγή Αποτελεσμάτων
+    </a>
+    <a mat-button routerLink="/event-parameters" routerLinkActive="app-toolbar__link--active">
+      Όρια Βαθμολόγησης
+    </a>
+  </nav>
+</mat-toolbar>
+
+<main class="app-content">
+  <router-outlet />
+</main>

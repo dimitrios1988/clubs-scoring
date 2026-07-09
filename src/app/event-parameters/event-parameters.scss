@@ -1,0 +1,62 @@
+:host {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.params-card {
+  width: 100%;
+  max-width: 960px;
+
+  &__content {
+    padding-top: 1rem;
+  }
+
+  &__actions {
+    padding: 0.5rem 1rem 1rem;
+  }
+}
+
+.params-table {
+  display: flex;
+  flex-direction: column;
+
+  // Header row + each event row share this column layout.
+  &__head,
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__head {
+    padding: 0 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--mat-sys-on-surface-variant);
+    border-bottom: 1px solid var(--mat-sys-outline-variant);
+  }
+
+  &__row {
+    padding: 0.25rem 0.25rem 0;
+    border-bottom: 1px solid var(--mat-sys-outline-variant);
+  }
+
+  &__code {
+    font-weight: 500;
+  }
+
+  &__gender {
+    color: var(--mat-sys-on-surface-variant);
+  }
+
+  &__field {
+    width: 100%;
+  }
+}

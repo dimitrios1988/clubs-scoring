@@ -1,0 +1,30 @@
+<h2 mat-dialog-title class="about__title">
+  <mat-icon>scoreboard</mat-icon>
+  Πληροφορίες
+</h2>
+
+<mat-dialog-content class="about__content">
+  <p class="about__app-name">{{ info.name }}</p>
+  <p class="about__version">Έκδοση {{ info.version }}</p>
+
+  <dl class="about__details">
+    <dt>Δημιουργός</dt>
+    <dd>{{ info.creator }}</dd>
+
+    <dt>Επικοινωνία</dt>
+    <dd>
+      <a [href]="'mailto:' + info.email" target="_blank" rel="noopener">{{ info.email }}</a>
+    </dd>
+
+    <dt>Ιστότοπος</dt>
+    <dd>
+      <a [href]="info.website" target="_blank" rel="noopener">{{ info.website }}</a>
+    </dd>
+  </dl>
+
+  <p class="about__copyright">© {{ info.year }} {{ info.creator }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button matDialogClose>Κλείσιμο</button>
+</mat-dialog-actions>

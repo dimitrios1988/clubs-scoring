@@ -1,0 +1,60 @@
+{
+  "name": "clubs-scoring",
+  "version": "2026.07.08",
+  "description": "A scoring application for clubs",
+  "author": "Dimitrios Chondrokoukis",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "ng:build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "electron:compile": "tsc -p electron/tsconfig.json",
+    "dev": "npm run electron:compile && concurrently -k -n ng,electron \"npm:start\" \"wait-on http://localhost:4200 && cross-env NODE_ENV=development electron .\"",
+    "build": "ng build && npm run electron:compile",
+    "package": "npm run build && electron-builder"
+  },
+  "private": true,
+  "packageManager": "npm@11.16.0",
+  "build": {
+    "appId": "gr.weallrun.clubsscoring.app",
+    "productName": "Clubs Scoring",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist-electron/**/*",
+      "dist/clubs-scoring/browser/**/*"
+    ]
+  },
+  "dependencies": {
+    "@angular/animations": "^22.0.5",
+    "@angular/cdk": "^22.0.3",
+    "@angular/common": "^22.0.0",
+    "@angular/compiler": "^22.0.0",
+    "@angular/core": "^22.0.0",
+    "@angular/forms": "^22.0.0",
+    "@angular/material": "^22.0.3",
+    "@angular/platform-browser": "^22.0.0",
+    "@angular/router": "^22.0.0",
+    "papaparse": "^5.5.4",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^22.0.5",
+    "@angular/cli": "^22.0.5",
+    "@angular/compiler-cli": "^22.0.0",
+    "@types/papaparse": "^5.5.2",
+    "concurrently": "^10.0.3",
+    "cross-env": "^10.1.0",
+    "electron": "^43.0.0",
+    "electron-builder": "^26.15.3",
+    "jsdom": "^28.0.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "vitest": "^4.0.8",
+    "wait-on": "^9.0.10"
+  }
+}
