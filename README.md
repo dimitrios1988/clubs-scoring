@@ -29,13 +29,13 @@ electron/
 
 ## Scripts
 
-| Command                    | What it does                                                            |
-| -------------------------- | ----------------------------------------------------------------------- |
-| `npm run dev`              | Compile Electron, start `ng serve`, wait for it, then open the Electron window (hot reload). |
-| `npm start`                | Angular dev server only (browser), at `http://localhost:4200`.          |
-| `npm run build`            | Production Angular build **and** compile the Electron main/preload.      |
-| `npm run package`          | Build, then package a distributable with electron-builder (`release/`).  |
-| `npm test`                 | Run unit tests (Vitest).                                                 |
+| Command           | What it does                                                                                 |
+| ----------------- | -------------------------------------------------------------------------------------------- |
+| `npm run dev`     | Compile Electron, start `ng serve`, wait for it, then open the Electron window (hot reload). |
+| `npm start`       | Angular dev server only (browser), at `http://localhost:4200`.                               |
+| `npm run build`   | Production Angular build **and** compile the Electron main/preload.                          |
+| `npm run package` | Build, then package a distributable with electron-builder (`release/`).                      |
+| `npm test`        | Run unit tests (Vitest).                                                                     |
 
 ### Develop
 
@@ -57,10 +57,6 @@ The build outputs are:
 
 ## Notes
 
-- The dropdown options in `src/app/app.ts` (`options`) are **placeholders** — replace them
-  with the real selection items when ready.
-- The parsed JSON is held in memory (`jsonData` signal in `App`) and is **not displayed yet**;
-  a temporary `console.log` in `handleFile` confirms parsing during development.
 - If launching Electron fails with `Cannot read properties of undefined (reading 'isPackaged')`,
   your terminal has `ELECTRON_RUN_AS_NODE=1` set (some editor integrated terminals do this).
   Clear it before running: `set ELECTRON_RUN_AS_NODE=` (cmd) /
