@@ -102,7 +102,12 @@ export class Import {
   async processRows(rows: Result[], params: Record<string, EventParameter>): Promise<void> {
     let filteredRows = this.removeDNSAthletes(rows);
     filteredRows = rows
-      .filter((row) => (row.StartStatus === 'OK' || row.StartStatus === 'NM') && row.RelayId === '')
+      .filter(
+        (row) =>
+          (row.StartStatus === 'OK' || row.StartStatus === 'NM' || row.StartStatus === 'DNF') &&
+          row.RelayId === '' &&
+          row.CombinedEventRelation !== 'Child',
+      )
       .map((row) => ({
         ...row,
         Grade: null,
@@ -116,7 +121,7 @@ export class Import {
     const blocks: string[] = [];
     let gradedResultsCollection: Result[] = [];
     for (const [key, param] of Object.entries(params)) {
-      if (param.performance !== '') {
+      if (param.performance !== '' && param.active) {
         const [eventCode, gender] = key.split('|');
         const event = eventConstants.find(
           (e) => e.EventCode === eventCode && e.EventGender === gender,
@@ -338,12 +343,16 @@ export class Import {
           BiggerIsBetter,
         )
       ) {
-        if (row.StartStatus !== 'NM') {
+        if (row.StartStatus === 'NM' || row.StartStatus === 'DNF') {
+          row.Grade =
+            Number(grade[finalists.length as unknown as keyof Grade] ?? 0) * (multipliedBy ?? 1);
+        }
+        /*  if (row.StartStatus !== 'NM') {
           //row.Grade = Number(grade[row.Place! as unknown as keyof Grade] ?? 0) * (multipliedBy ?? 1);
         } else {
           row.Grade =
             Number(grade[finalists.length as unknown as keyof Grade] ?? 0) * (multipliedBy ?? 1);
-        }
+        } */
       } else {
         row.Grade = 0;
       }
@@ -362,7 +371,7 @@ export class Import {
       }
     }
     for (const group of finalistsByPlace.values()) {
-      if (group.length > 0 && group[0].StartStatus !== 'NM') {
+      if (group.length > 0 && group[0].StartStatus === 'OK') {
         group.forEach((row, index) => {
           row.Grade = Number(
             grade[(index + Number(row.Place ?? 0)) as unknown as keyof Grade] ??
