@@ -15,6 +15,7 @@ function normalize(parsed: unknown): Record<string, EventParameter> {
         name: typeof entry.name === 'string' ? entry.name : '',
         performance: typeof entry.performance === 'string' ? entry.performance : '',
         multipliedBy: typeof entry.multipliedBy === 'number' ? entry.multipliedBy : null,
+        active: entry.active === true,
       };
     }
   }

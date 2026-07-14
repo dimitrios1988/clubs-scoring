@@ -11,6 +11,8 @@ export interface EventParameter {
   performance: string;
   /** Numeric multiplier; null when the field is left blank. */
   multipliedBy: number | null;
+  /** Whether the event participates in import/scoring. */
+  active: boolean;
 }
 
 /** Persistence channels for the Event Parameters screen. */

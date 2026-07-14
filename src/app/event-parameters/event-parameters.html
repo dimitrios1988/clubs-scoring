@@ -14,6 +14,7 @@
         <span role="columnheader">Ονομασία Αγώνισματος</span>
         <span role="columnheader">Όριο Βαθμολόγησης</span>
         <span role="columnheader">Πολλαπλασιαστής</span>
+        <span role="columnheader">Ενεργό</span>
       </div>
 
       @for (row of rows; track row.key) {
@@ -34,11 +35,17 @@
             <input
               matInput
               type="text"
+              #perf="ngModel"
               [ngModel]="performanceFor(row.key)"
               (ngModelChange)="setPerformance(row.key, $event)"
               [pattern]="row.validationRegex"
+              [required]="activeFor(row.key)"
             />
-            <mat-error>Μη έγκυρη μορφή για αυτό το αγώνισμα.</mat-error>
+            @if (perf.hasError('required')) {
+              <mat-error>Η επίδοση είναι υποχρεωτική για ενεργά αγωνίσματα.</mat-error>
+            } @else {
+              <mat-error>Μη έγκυρη μορφή για αυτό το αγώνισμα.</mat-error>
+            }
           </mat-form-field>
           <mat-form-field appearance="outline" class="params-table__field" role="cell">
             <mat-label>Πολλαπλασιαστής</mat-label>
@@ -49,6 +56,12 @@
               (input)="onMultipliedByInput(row.key, $event)"
             />
           </mat-form-field>
+          <mat-checkbox
+            class="params-table__checkbox"
+            role="cell"
+            [checked]="activeFor(row.key)"
+            (change)="onActiveChange(row.key, $event.checked)"
+          />
         </div>
       }
     </div>

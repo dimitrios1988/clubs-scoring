@@ -14,10 +14,16 @@ contextBridge.exposeInMainWorld('electronAPI', {
   },
   eventParameters: {
     load: (): Promise<
-      Record<string, { name: string; performance: string; multipliedBy: number | null }>
+      Record<
+        string,
+        { name: string; performance: string; multipliedBy: number | null; active: boolean }
+      >
     > => ipcRenderer.invoke('event-params:load'),
     save: (
-      params: Record<string, { name: string; performance: string; multipliedBy: number | null }>,
+      params: Record<
+        string,
+        { name: string; performance: string; multipliedBy: number | null; active: boolean }
+      >,
     ): Promise<void> => ipcRenderer.invoke('event-params:save', params),
   },
   files: {

@@ -15,11 +15,12 @@ const DEV_SERVER_URL = 'http://localhost:4200';
 
 let mainWindow: BrowserWindow | null = null;
 
-/** The parameters stored for a single event (Name, Performance, Multiplied By). */
+/** The parameters stored for a single event (Name, Performance, Multiplied By, Active). */
 interface EventParameter {
   name: string;
   performance: string;
   multipliedBy: number | null;
+  active: boolean;
 }
 
 /** Path to the JSON file that stores per-event parameters. */

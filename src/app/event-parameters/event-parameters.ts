@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -37,6 +38,7 @@ function eventKey(eventCode: string, eventGender: string): string {
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCheckboxModule,
     MatIconModule,
   ],
   templateUrl: './event-parameters.html',
@@ -82,7 +84,7 @@ export class EventParameters {
   }
 
   private paramsFor(key: string): EventParameter {
-    return this.values()[key] ?? { name: '', performance: '', multipliedBy: null };
+    return this.values()[key] ?? { name: '', performance: '', multipliedBy: null, active: false };
   }
 
   protected onFieldInput(key: string, field: 'name', event: Event): void {
@@ -106,6 +108,22 @@ export class EventParameters {
     return value !== '' && row.validationPattern !== null && !row.validationPattern.test(value);
   }
 
+  /** True when the event is active but no performance value has been entered. */
+  protected performanceMissing(row: EventRow): boolean {
+    return this.activeFor(row.key) && this.performanceFor(row.key) === '';
+  }
+
+  protected activeFor(key: string): boolean {
+    return this.values()[key]?.active ?? false;
+  }
+
+  protected onActiveChange(key: string, active: boolean): void {
+    this.values.update((current) => ({
+      ...current,
+      [key]: { ...this.paramsFor(key), active },
+    }));
+  }
+
   protected onMultipliedByInput(key: string, event: Event): void {
     const raw = (event.target as HTMLInputElement).value;
     const multipliedBy = raw === '' ? null : Number(raw);
@@ -116,10 +134,12 @@ export class EventParameters {
   }
 
   protected async save(): Promise<void> {
-    const invalidCount = this.rows.filter((row) => this.performanceInvalid(row)).length;
+    const invalidCount = this.rows.filter(
+      (row) => this.performanceInvalid(row) || this.performanceMissing(row),
+    ).length;
     if (invalidCount > 0) {
       this.snackBar.open(
-        `Διορθώστε ${invalidCount} μη έγκυρη(ες) τιμή(ές) επίδοσης πριν την αποθήκευση.`,
+        `Διορθώστε ή συμπληρώστε ${invalidCount} τιμή(ές) επίδοσης πριν την αποθήκευση.`,
         'Κλείσιμο',
         { duration: 5000 },
       );
