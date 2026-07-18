@@ -373,10 +373,12 @@ export class Import {
     for (const group of finalistsByPlace.values()) {
       if (group.length > 0 && group[0].StartStatus === 'OK') {
         group.forEach((row, index) => {
-          row.Grade = Number(
-            grade[(index + Number(row.Place ?? 0)) as unknown as keyof Grade] ??
-              0 * (multipliedBy ?? 1),
-          );
+          if (row.Grade != 0) {
+            row.Grade = Number(
+              grade[(index + Number(row.Place ?? 0)) as unknown as keyof Grade] ??
+                0 * (multipliedBy ?? 1),
+            );
+          }
         });
 
         const averageGrade = group.reduce((sum, row) => sum + (row.Grade ?? 0), 0) / group.length;
@@ -467,22 +469,22 @@ export class Import {
       (BiggerIsBetter &&
         filteredRows.some(
           (r) =>
-            r.License_GreekAth === row.License_GreekAth ||
-            (r.RelayTeamName === row.RelayTeamName &&
-              r.EventCode === row.EventCode &&
-              r.EventGender === row.EventGender &&
-              r.Result !== '' &&
-              Number(r.RectifiedResult) >= rectifiedPerformance),
+            (r.License_GreekAth === row.License_GreekAth ||
+              (r.RelayTeamName === row.RelayTeamName && r.RelayTeamName !== '')) &&
+            r.EventCode === row.EventCode &&
+            r.EventGender === row.EventGender &&
+            r.Result !== '' &&
+            Number(r.RectifiedResult) >= rectifiedPerformance,
         )) ||
       (!BiggerIsBetter &&
         filteredRows.some(
           (r) =>
-            r.License_GreekAth === row.License_GreekAth ||
-            (r.RelayTeamName === row.RelayTeamName &&
-              r.EventCode === row.EventCode &&
-              r.EventGender === row.EventGender &&
-              r.Result !== '' &&
-              Number(r.RectifiedResult) <= rectifiedPerformance),
+            (r.License_GreekAth === row.License_GreekAth ||
+              (r.RelayTeamName === row.RelayTeamName && r.RelayTeamName !== '')) &&
+            r.EventCode === row.EventCode &&
+            r.EventGender === row.EventGender &&
+            r.Result !== '' &&
+            Number(r.RectifiedResult) <= rectifiedPerformance,
         ))
     ) {
       return true;
