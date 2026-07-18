@@ -10,6 +10,7 @@
     <div class="params-table" role="table" aria-label="Παράμετροι αγωνισμάτων">
       <div class="params-table__head" role="row">
         <span role="columnheader">Αγώνισμα στο Roster Athletics</span>
+        <span role="columnheader">Κωδικός αγωνίσματος στο Roster Athletics</span>
         <span role="columnheader">Φύλο</span>
         <span role="columnheader">Ονομασία Αγώνισματος</span>
         <span role="columnheader">Όριο Βαθμολόγησης</span>
@@ -20,6 +21,7 @@
       @for (row of rows; track row.key) {
         <div class="params-table__row" role="row">
           <span class="params-table__code" role="cell">{{ row.eventName }}</span>
+          <span class="params-table__code" role="cell">{{ row.eventCode }}</span>
           <span class="params-table__gender" role="cell">{{ row.eventGender }}</span>
           <mat-form-field appearance="outline" class="params-table__field" role="cell">
             <mat-label>Ονομασία Αγώνισματος</mat-label>

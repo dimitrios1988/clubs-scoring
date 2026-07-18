@@ -9,7 +9,7 @@
 
 .params-card {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1300px;
 
   &__content {
     padding-top: 1rem;
@@ -28,7 +28,7 @@
   &__head,
   &__row {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 2fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr auto;
     gap: 1rem;
     align-items: center;
   }
