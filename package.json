@@ -1,6 +1,6 @@
 {
   "name": "clubs-scoring",
-  "version": "2026.07.18",
+  "version": "2026.07.19",
   "description": "A scoring application for clubs",
   "author": "Dimitrios Chondrokoukis",
   "main": "dist-electron/main.js",
