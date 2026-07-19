@@ -374,10 +374,9 @@ export class Import {
       if (group.length > 0 && group[0].StartStatus === 'OK') {
         group.forEach((row, index) => {
           if (row.Grade != 0) {
-            row.Grade = Number(
-              grade[(index + Number(row.Place ?? 0)) as unknown as keyof Grade] ??
-                0 * (multipliedBy ?? 1),
-            );
+            row.Grade =
+              Number(grade[(index + Number(row.Place ?? 0)) as unknown as keyof Grade] ?? 0) *
+              (multipliedBy ?? 1);
           }
         });
 
@@ -427,10 +426,9 @@ export class Import {
       let count = 1;
       for (const group of preliminaristsByPlace.values()) {
         group.forEach((row, index) => {
-          row.Grade = Number(
-            grade[(index + 1 + finalists.length) as unknown as keyof Grade] ??
-              0 * (multipliedBy ?? 1),
-          );
+          row.Grade =
+            Number(grade[(index + 1 + finalists.length) as unknown as keyof Grade] ?? 0) *
+            (multipliedBy ?? 1);
         });
         const averageGrade =
           group.reduce(
