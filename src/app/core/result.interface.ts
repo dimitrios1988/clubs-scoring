@@ -14,6 +14,7 @@ export interface Result {
   NationalRelayTeam: string;
   FullName: string;
   FullNameInt: string;
+  OOC: string;
   FirstName: string;
   MiddleName: string;
   LastName: string;

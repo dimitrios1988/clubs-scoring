@@ -106,7 +106,7 @@ export class Import {
         (row) =>
           (row.StartStatus === 'OK' || row.StartStatus === 'NM' || row.StartStatus === 'DNF') &&
           row.RelayId === '' &&
-          row.CombinedEventRelation !== 'Child',
+          row.CombinedEventRelation !== 'Child' && row.OOC == "false",
       )
       .map((row) => ({
         ...row,
